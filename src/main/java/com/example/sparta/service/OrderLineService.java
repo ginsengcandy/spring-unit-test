@@ -24,6 +24,7 @@ public class OrderLineService {
         List<OrderLineRequest> orderLineRequests
     ) {
         List<OrderLine> orderLineList = new ArrayList<>();
+        // Mocking
         for (OrderLineRequest olr : orderLineRequests) {
             Product product = productRepository.findById(olr.getProductId())
                 .orElseThrow(() -> new RuntimeException("존재하지 않는 상품은 주문할 수 없습니다 !"));
@@ -34,6 +35,7 @@ public class OrderLineService {
             // 주문 상세 데이터 생성
             orderLineList.add(new OrderLine(order, product, olr.getAmount()));
         }
+        // Mocking
         return orderLineRepository.saveAll(orderLineList);
     }
 }
