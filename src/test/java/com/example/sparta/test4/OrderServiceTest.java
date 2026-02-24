@@ -22,8 +22,6 @@ public class OrderServiceTest {
     @InjectMocks
     private OrderService orderService;
 
-    @Test
-    void test() {
-
-    }
+//    @Test
+//    void test() {}
 }
